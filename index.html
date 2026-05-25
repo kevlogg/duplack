@@ -744,13 +744,8 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(circle at 60% 40%, rgba(0,180,216,0.15) 0%, transparent 50%),
-      repeating-linear-gradient(
-        135deg,
-        rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 1px,
-        transparent 1px, transparent 20px
-      ),
-      linear-gradient(135deg, #e8e8e0, #d0d0c8);
+      radial-gradient(circle at 60% 40%, rgba(0,180,216,0.12) 0%, transparent 50%),
+      url('https://images.pexels.com/photos/6487949/pexels-photo-6487949.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop') center/cover;
     border-left: 4px solid var(--cyan);
   }
   .ventajas-card-float {
@@ -1600,6 +1595,7 @@
 <!-- ════════ HERO ════════ -->
 <section id="hero">
   <div class="hero-bg"></div>
+  <div style="position:absolute;inset:0;background:url('https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;opacity:0.13;z-index:0;pointer-events:none;"></div>
   <div class="hero-concrete"></div>
   <div class="hero-accent-line"></div>
   <div class="hero-accent-line2"></div>
@@ -1705,7 +1701,7 @@
 
       <!-- Placas Antihumedad -->
       <div class="product-card reveal delay-1">
-        <div class="product-visual pv-antihumedad">
+        <div class="product-visual" style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.05)),url('https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop') center/cover;">
           <div class="pv-highlight"></div>
           <div class="product-overlay"></div>
           <div class="product-badge">20% OFF Mayo</div>
@@ -1724,7 +1720,7 @@
 
       <!-- Autoadhesivas -->
       <div class="product-card reveal delay-2">
-        <div class="product-visual pv-autoadhesiva">
+        <div class="product-visual" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.15)),url('https://images.pexels.com/photos/13277522/pexels-photo-13277522.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop') center/cover;">
           <div class="pv-highlight"></div>
           <div class="product-overlay"></div>
           <div class="product-badge hot">Hot Sale</div>
@@ -1745,7 +1741,7 @@
 
       <!-- Rollo Lino -->
       <div class="product-card reveal delay-3">
-        <div class="product-visual pv-lino">
+        <div class="product-visual" style="background:linear-gradient(rgba(0,0,0,0.35),rgba(0,0,0,0.15)),url('https://images.pexels.com/photos/7794364/pexels-photo-7794364.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop') center/cover;">
           <div class="pv-highlight"></div>
           <div class="product-overlay"></div>
         </div>
@@ -1762,7 +1758,7 @@
 
       <!-- Wall Panels -->
       <div class="product-card reveal delay-1">
-        <div class="product-visual pv-wall">
+        <div class="product-visual" style="background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('https://images.pexels.com/photos/4857757/pexels-photo-4857757.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop') center/cover;">
           <div class="pv-highlight"></div>
           <div class="product-overlay"></div>
         </div>
@@ -1780,7 +1776,7 @@
 
       <!-- Jardines Verticales -->
       <div class="product-card reveal delay-2">
-        <div class="product-visual pv-jardin">
+        <div class="product-visual" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url('https://images.pexels.com/photos/12636539/pexels-photo-12636539.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop') center/cover;">
           <div class="pv-highlight"></div>
           <div class="product-overlay"></div>
           <div class="product-badge hot">Hot Sale</div>
@@ -1801,7 +1797,7 @@
 
       <!-- Yeso Selenita -->
       <div class="product-card reveal delay-3">
-        <div class="product-visual pv-yeso">
+        <div class="product-visual" style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url('https://images.pexels.com/photos/7598536/pexels-photo-7598536.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop') center/cover;">
           <div class="pv-highlight"></div>
           <div class="product-overlay"></div>
         </div>
@@ -1877,11 +1873,11 @@
     <div class="resultados-grid">
 
       <div class="antes-despues reveal delay-1">
-        <div class="antes-mitad ugly1">
+        <div class="antes-mitad" style="background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.3)),url('https://images.pexels.com/photos/5734369/pexels-photo-5734369.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop') center/cover;">
           <div class="ad-label">ANTES</div>
           <div class="ad-room-label">Baño / Humedad</div>
         </div>
-        <div class="despues-mitad clean1">
+        <div class="despues-mitad" style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)),url('https://images.pexels.com/photos/7745934/pexels-photo-7745934.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop') center/cover;">
           <div class="ad-label after">DESPUÉS</div>
           <div class="ad-room-label after-room">Placa Antihumedad</div>
         </div>
@@ -1890,11 +1886,11 @@
       </div>
 
       <div class="antes-despues reveal delay-2">
-        <div class="antes-mitad ugly2">
+        <div class="antes-mitad" style="background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.35)),url('https://images.pexels.com/photos/15532138/pexels-photo-15532138.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop') center/cover;">
           <div class="ad-label">ANTES</div>
           <div class="ad-room-label">Living / Pared lisa</div>
         </div>
-        <div class="despues-mitad clean2">
+        <div class="despues-mitad" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)),url('https://images.pexels.com/photos/9565782/pexels-photo-9565782.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop') center/cover;">
           <div class="ad-label after">DESPUÉS</div>
           <div class="ad-room-label after-room">Wall Panel Madera</div>
         </div>
@@ -1903,11 +1899,11 @@
       </div>
 
       <div class="antes-despues reveal delay-3">
-        <div class="antes-mitad ugly3">
+        <div class="antes-mitad" style="background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.4)),url('https://images.pexels.com/photos/5734369/pexels-photo-5734369.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop') right/cover;">
           <div class="ad-label">ANTES</div>
           <div class="ad-room-label">Terraza / Balcón</div>
         </div>
-        <div class="despues-mitad clean3">
+        <div class="despues-mitad" style="background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.05)),url('https://images.pexels.com/photos/1974508/pexels-photo-1974508.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop') center/cover;">
           <div class="ad-label after">DESPUÉS</div>
           <div class="ad-room-label after-room">Jardín Vertical</div>
         </div>
@@ -2064,7 +2060,7 @@
     <div class="insta-grid">
 
       <div class="insta-post reveal delay-1">
-        <div class="insta-bg ip1" style="font-size:40px; letter-spacing:4px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🏠</div>
+        <div class="insta-bg ip1" style="position:absolute;inset:0;background:url('https://images.pexels.com/photos/10099090/pexels-photo-10099090.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop') center/cover;"></div>
         <div class="insta-likes">❤️ 342</div>
         <div class="insta-hover">🔍</div>
         <div class="insta-content">
@@ -2074,7 +2070,7 @@
       </div>
 
       <div class="insta-post reveal delay-2">
-        <div class="insta-bg ip2" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🌿</div>
+        <div class="insta-bg ip2" style="position:absolute;inset:0;background:url('https://images.pexels.com/photos/1974508/pexels-photo-1974508.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop') center/cover;"></div>
         <div class="insta-likes">❤️ 891</div>
         <div class="insta-hover">🔍</div>
         <div class="insta-content">
@@ -2084,7 +2080,7 @@
       </div>
 
       <div class="insta-post reveal delay-3">
-        <div class="insta-bg ip3" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🛋️</div>
+        <div class="insta-bg ip3" style="position:absolute;inset:0;background:url('https://images.pexels.com/photos/4857757/pexels-photo-4857757.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop') center/cover;"></div>
         <div class="insta-likes">❤️ 1.2K</div>
         <div class="insta-hover">🔍</div>
         <div class="insta-content">
@@ -2094,7 +2090,7 @@
       </div>
 
       <div class="insta-post reveal delay-4">
-        <div class="insta-bg ip4" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🍳</div>
+        <div class="insta-bg ip4" style="position:absolute;inset:0;background:url('https://images.pexels.com/photos/10099335/pexels-photo-10099335.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop') center/cover;"></div>
         <div class="insta-likes">❤️ 567</div>
         <div class="insta-hover">🔍</div>
         <div class="insta-content">
@@ -2104,7 +2100,7 @@
       </div>
 
       <div class="insta-post reveal delay-5">
-        <div class="insta-bg ip5" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🛁</div>
+        <div class="insta-bg ip5" style="position:absolute;inset:0;background:url('https://images.pexels.com/photos/7031571/pexels-photo-7031571.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop') center/cover;"></div>
         <div class="insta-likes">❤️ 734</div>
         <div class="insta-hover">🔍</div>
         <div class="insta-content">
@@ -2114,7 +2110,7 @@
       </div>
 
       <div class="insta-post reveal delay-6">
-        <div class="insta-bg ip6" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🖼️</div>
+        <div class="insta-bg ip6" style="position:absolute;inset:0;background:url('https://images.pexels.com/photos/5908326/pexels-photo-5908326.jpeg?auto=compress&cs=tinysrgb&w=500&h=500&fit=crop') center/cover;"></div>
         <div class="insta-likes">❤️ 483</div>
         <div class="insta-hover">🔍</div>
         <div class="insta-content">
