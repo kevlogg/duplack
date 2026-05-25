@@ -1,0 +1,2341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DUPLACK Revestimientos - Placas antihumedad, wall panels, jardines verticales y materiales de decoración DIY en Mar del Plata. Instalación sin obra.">
+<title>DUPLACK Revestimientos — Placas Antihumedad Mar del Plata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0D0D0D;
+    --black2: #111111;
+    --black3: #1A1A1A;
+    --white: #FFFFFF;
+    --offwhite: #F5F5F0;
+    --cyan: #00B4D8;
+    --cyan-dark: #0090AF;
+    --cyan-glow: rgba(0,180,216,0.15);
+    --gray: #C8C8C8;
+    --gray-mid: #888888;
+    --gray-dark: #333333;
+    --font-display: 'Bebas Neue', 'Barlow Condensed', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ─── SCROLLBAR ─────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--black); }
+  ::-webkit-scrollbar-thumb { background: var(--cyan); }
+
+  /* ─── UTILITY ────────────────────────────────────────── */
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  .section { padding: 100px 0; }
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  /* ─── REVEAL ANIMATIONS ──────────────────────────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+  .delay-1 { transition-delay: 0.1s; }
+  .delay-2 { transition-delay: 0.2s; }
+  .delay-3 { transition-delay: 0.3s; }
+  .delay-4 { transition-delay: 0.4s; }
+  .delay-5 { transition-delay: 0.5s; }
+  .delay-6 { transition-delay: 0.6s; }
+
+  /* ─── NOISE TEXTURE OVERLAY ─────────────────────────── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.3;
+  }
+
+  /* ════════════════════════════════════════════════════════
+     NAVIGATION
+  ════════════════════════════════════════════════════════ */
+  #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: background 0.4s ease, padding 0.4s ease, backdrop-filter 0.4s ease;
+  }
+  #nav.scrolled {
+    background: rgba(13,13,13,0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0,180,216,0.12);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .logo-main {
+    font-family: var(--font-display);
+    font-size: 26px;
+    letter-spacing: 0.08em;
+    color: var(--white);
+  }
+  .logo-sub {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-top: 1px;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--cyan);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a:hover::after { width: 100%; }
+  .btn-nav {
+    background: var(--cyan);
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 22px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: background 0.2s, transform 0.2s;
+  }
+  .btn-nav:hover { background: var(--white); transform: translateY(-1px); }
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .nav-burger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--white);
+    transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: var(--font-display);
+    font-size: 48px;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--cyan); }
+  .mobile-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  /* ════════════════════════════════════════════════════════
+     HERO
+  ════════════════════════════════════════════════════════ */
+  #hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 40%, rgba(0,180,216,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 10% 80%, rgba(0,180,216,0.04) 0%, transparent 50%),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.015) 80px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.015) 80px
+      ),
+      var(--black);
+  }
+  .hero-concrete {
+    position: absolute;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='concrete'%3E%3CfeTurbulence type='turbulence' baseFrequency='0.65' numOctaves='3' result='noise'/%3E%3CfeColorMatrix type='saturate' values='0' in='noise'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23concrete)' opacity='0.06'/%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+  .hero-accent-line {
+    position: absolute;
+    top: 0;
+    right: 15%;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--cyan), transparent);
+    opacity: 0.2;
+  }
+  .hero-accent-line2 {
+    position: absolute;
+    top: 0;
+    right: 25%;
+    width: 1px;
+    height: 60%;
+    background: linear-gradient(to bottom, transparent, rgba(0,180,216,0.3), transparent);
+    opacity: 0.15;
+  }
+  .hero-diamond {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 420px;
+    height: 420px;
+    opacity: 0.04;
+  }
+  .hero-diamond2 {
+    position: absolute;
+    right: 5%;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 280px;
+    height: 280px;
+    opacity: 0.06;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,180,216,0.1);
+    border: 1px solid rgba(0,180,216,0.3);
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    margin-bottom: 28px;
+    animation: badgePulse 3s ease-in-out infinite;
+  }
+  @keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0,180,216,0.2); }
+    50% { box-shadow: 0 0 0 8px rgba(0,180,216,0); }
+  }
+  .hero-badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    animation: dotBlink 2s ease-in-out infinite;
+  }
+  @keyframes dotBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(64px, 10vw, 130px);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+  .hero-title .accent { color: var(--cyan); }
+  .hero-title .stroke {
+    -webkit-text-stroke: 2px var(--white);
+    color: transparent;
+  }
+  .hero-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(18px, 3vw, 32px);
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    margin-top: 16px;
+    margin-bottom: 48px;
+    display: block;
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: var(--cyan);
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .btn-primary:hover::before { transform: translateX(100%); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,180,216,0.3); }
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 15px 36px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  .btn-secondary:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    transform: translateY(-2px);
+  }
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-top: 64px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 36px;
+    color: var(--cyan);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 12px;
+    color: var(--gray-mid);
+    letter-spacing: 0.05em;
+    margin-top: 4px;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray-mid);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    z-index: 2;
+    animation: scrollBounce 2s ease-in-out infinite;
+  }
+  @keyframes scrollBounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--cyan), transparent);
+  }
+
+  /* ════════════════════════════════════════════════════════
+     VALUE PROPS
+  ════════════════════════════════════════════════════════ */
+  #valores { background: var(--black2); }
+  .valores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .valor-card {
+    background: var(--black2);
+    padding: 48px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+  .valor-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--cyan);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .valor-card:hover { background: var(--black3); }
+  .valor-card:hover::before { transform: scaleX(1); }
+  .valor-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(0,180,216,0.4));
+  }
+  .valor-title {
+    font-family: var(--font-display);
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .valor-desc {
+    font-size: 14px;
+    color: var(--gray-mid);
+    line-height: 1.7;
+  }
+  .valor-number {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-family: var(--font-display);
+    font-size: 80px;
+    color: rgba(255,255,255,0.03);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* ════════════════════════════════════════════════════════
+     PRODUCTS
+  ════════════════════════════════════════════════════════ */
+  #productos { background: var(--black); }
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 6vw, 72px);
+    letter-spacing: 0.03em;
+    line-height: 0.95;
+    color: var(--white);
+  }
+  .section-title .accent { color: var(--cyan); }
+  .section-title .stroke {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    color: transparent;
+  }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .product-card {
+    background: var(--black3);
+    border: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    group: true;
+  }
+  .product-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0,180,216,0.3);
+  }
+  .product-card:hover .product-overlay { opacity: 1; }
+  .product-visual {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,180,216,0.08);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--cyan);
+    color: var(--black);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+    z-index: 2;
+  }
+  .product-badge.hot {
+    background: #FF4444;
+    color: var(--white);
+  }
+  .product-info { padding: 24px; }
+  .product-category {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin-bottom: 8px;
+  }
+  .product-name {
+    font-family: var(--font-display);
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    margin-bottom: 10px;
+    line-height: 1.1;
+  }
+  .product-desc {
+    font-size: 13px;
+    color: var(--gray-mid);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .product-pricing { margin-bottom: 20px; }
+  .product-price-main {
+    font-family: var(--font-display);
+    font-size: 28px;
+    color: var(--white);
+    letter-spacing: 0.03em;
+  }
+  .product-price-main .unit {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--gray-mid);
+    font-weight: 400;
+  }
+  .product-price-variants {
+    font-size: 12px;
+    color: var(--gray-mid);
+    margin-top: 4px;
+    line-height: 1.7;
+  }
+  .btn-consultar {
+    display: block;
+    text-align: center;
+    background: transparent;
+    border: 1px solid rgba(0,180,216,0.4);
+    color: var(--cyan);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+  .btn-consultar:hover {
+    background: var(--cyan);
+    color: var(--black);
+    border-color: var(--cyan);
+  }
+  /* Product visual patterns */
+  .pv-antihumedad {
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 40px),
+      linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  }
+  .pv-autoadhesiva {
+    background: linear-gradient(135deg, #1C1C2E 0%, #16213E 50%, #0F3460 100%);
+    position: relative;
+  }
+  .pv-autoadhesiva::after {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 1px dashed rgba(0,180,216,0.3);
+  }
+  .pv-lino {
+    background:
+      repeating-linear-gradient(45deg, #1a1510 0%, #1a1510 2px, #221e17 2px, #221e17 8px),
+      #1a1510;
+  }
+  .pv-wall {
+    background: linear-gradient(to right,
+      #1a1007 0%, #1a1007 12%, #2a1a0a 12%, #2a1a0a 14%,
+      #1a1007 14%, #1a1007 26%, #2a1a0a 26%, #2a1a0a 28%,
+      #1a1007 28%, #1a1007 100%
+    );
+  }
+  .pv-jardin {
+    background: linear-gradient(135deg, #0a1f0a, #0d2b0d, #0f330f);
+    position: relative;
+    overflow: hidden;
+  }
+  .pv-jardin::before {
+    content: '🌿🍃🌱🌿🍃';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    letter-spacing: 4px;
+    opacity: 0.4;
+  }
+  .pv-yeso {
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(255,255,255,0.08) 0%, transparent 50%),
+      linear-gradient(135deg, #1a1a1a, #222222);
+  }
+  .pv-highlight {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.04), transparent);
+    transform: skewX(-15deg);
+    animation: shimmer 4s ease-in-out infinite;
+  }
+  @keyframes shimmer { 0% { left: -60%; } 100% { left: 150%; } }
+
+  /* ════════════════════════════════════════════════════════
+     WHY DUPLACK
+  ════════════════════════════════════════════════════════ */
+  #ventajas { background: var(--offwhite); color: var(--black); }
+  .ventajas-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .ventajas-visual {
+    position: relative;
+    height: 560px;
+  }
+  .ventajas-main-img {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 60% 40%, rgba(0,180,216,0.15) 0%, transparent 50%),
+      repeating-linear-gradient(
+        135deg,
+        rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 1px,
+        transparent 1px, transparent 20px
+      ),
+      linear-gradient(135deg, #e8e8e0, #d0d0c8);
+    border-left: 4px solid var(--cyan);
+  }
+  .ventajas-card-float {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--black);
+    color: var(--white);
+    padding: 28px;
+    width: 200px;
+    border-top: 3px solid var(--cyan);
+  }
+  .ventajas-card-float .num {
+    font-family: var(--font-display);
+    font-size: 52px;
+    color: var(--cyan);
+    line-height: 1;
+  }
+  .ventajas-card-float .label {
+    font-size: 12px;
+    color: var(--gray-mid);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .ventajas-tag-float {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    background: var(--cyan);
+    color: var(--black);
+    font-family: var(--font-display);
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+  }
+  .ventajas-content .section-label { color: var(--cyan-dark); }
+  .ventajas-title {
+    font-family: var(--font-display);
+    font-size: clamp(38px, 5vw, 56px);
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    margin-bottom: 32px;
+  }
+  .ventajas-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+  .ventajas-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+  }
+  .check-icon {
+    width: 22px;
+    height: 22px;
+    background: var(--cyan);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+  }
+  .envio-banner {
+    margin-top: 40px;
+    background: var(--black);
+    color: var(--white);
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+  }
+  .envio-banner strong { color: var(--cyan); }
+
+  /* ════════════════════════════════════════════════════════
+     ANTES Y DESPUÉS
+  ════════════════════════════════════════════════════════ */
+  #resultados { background: var(--black); }
+  .resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .antes-despues {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+  }
+  .antes-mitad, .despues-mitad {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .antes-mitad {
+    left: 0;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .despues-mitad {
+    right: 0;
+    border: 1px solid rgba(0,180,216,0.2);
+  }
+  .ad-label {
+    font-family: var(--font-display);
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+  }
+  .ad-label.after {
+    color: var(--cyan);
+    opacity: 1;
+  }
+  .ad-divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: var(--cyan);
+    z-index: 3;
+  }
+  .ad-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background: var(--cyan);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 4;
+    clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+  }
+  .ad-pattern1 {
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 30px),
+      #1c1c1c;
+  }
+  .ad-pattern2 {
+    background: linear-gradient(135deg, #0f1e2a, #0a2a1a);
+    position: relative;
+  }
+  .ad-pattern2::after {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px solid rgba(0,180,216,0.15);
+  }
+  .ad-pattern3 {
+    background: linear-gradient(135deg, #0a1f0a, #152515);
+  }
+  .antes-mitad.ugly1 { background: linear-gradient(135deg, #2a2010, #1a1508); }
+  .antes-mitad.ugly2 { background: linear-gradient(135deg, #1f1020, #140d18); }
+  .antes-mitad.ugly3 { background: linear-gradient(135deg, #1a1000, #120b00); }
+  .despues-mitad.clean1 {
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 40px),
+      #1a1a1a;
+  }
+  .despues-mitad.clean2 {
+    background:
+      repeating-linear-gradient(to right, #1a1007 0%, #1a1007 12%, #2a1a0a 12%, #2a1a0a 14%, #1a1007 14%, #1a1007 100%),
+      #1a1007;
+  }
+  .despues-mitad.clean3 {
+    background: linear-gradient(135deg, #0a1f0a, #0d2b0d);
+    position: relative;
+  }
+  .despues-mitad.clean3::before {
+    content: '🌿';
+    font-size: 40px;
+    position: absolute;
+    opacity: 0.5;
+  }
+  .ad-room-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .ad-room-label.after-room {
+    color: rgba(0,180,216,0.8);
+  }
+
+  /* ════════════════════════════════════════════════════════
+     PRECIOS / OFERTAS
+  ════════════════════════════════════════════════════════ */
+  #ofertas { background: var(--black3); overflow: hidden; }
+  .ofertas-header { text-align: center; margin-bottom: 60px; }
+  .ofertas-title {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 7vw, 80px);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+  .ticker-wrapper {
+    overflow: hidden;
+    background: var(--cyan);
+    padding: 12px 0;
+    margin-bottom: 60px;
+  }
+  .ticker-track {
+    display: flex;
+    gap: 0;
+    animation: ticker 20s linear infinite;
+    white-space: nowrap;
+  }
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--font-display);
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: var(--black);
+    padding: 0 32px;
+  }
+  .ticker-sep { color: rgba(0,0,0,0.3); }
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .ofertas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .oferta-card {
+    background: var(--black);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 36px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+  .oferta-card:hover { border-color: rgba(0,180,216,0.4); }
+  .oferta-card.featured {
+    border-color: rgba(0,180,216,0.3);
+    background: linear-gradient(135deg, rgba(0,180,216,0.05), rgba(0,0,0,0));
+  }
+  .oferta-card::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,180,216,0.08), transparent);
+  }
+  .oferta-discount {
+    font-family: var(--font-display);
+    font-size: 72px;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .oferta-name {
+    font-family: var(--font-display);
+    font-size: 26px;
+    letter-spacing: 0.05em;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .oferta-desc {
+    font-size: 14px;
+    color: var(--gray-mid);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .oferta-price {
+    font-family: var(--font-display);
+    font-size: 42px;
+    color: var(--white);
+    letter-spacing: 0.03em;
+  }
+  .oferta-price-unit {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--gray-mid);
+    font-weight: 400;
+  }
+  .oferta-validity {
+    font-size: 11px;
+    color: var(--gray-dark);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .validity-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyan);
+    animation: dotBlink 2s ease-in-out infinite;
+  }
+  .oferta-cta {
+    margin-top: 24px;
+    display: inline-block;
+    background: var(--cyan);
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    text-decoration: none;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    transition: all 0.25s;
+  }
+  .oferta-cta:hover { background: var(--white); transform: translateY(-2px); }
+
+  /* ════════════════════════════════════════════════════════
+     INSTALACIÓN
+  ════════════════════════════════════════════════════════ */
+  #instalacion { background: var(--offwhite); color: var(--black); }
+  .pasos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+    position: relative;
+  }
+  .pasos-grid::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: calc(16.66% + 20px);
+    right: calc(16.66% + 20px);
+    height: 1px;
+    background: linear-gradient(to right, var(--cyan), transparent, var(--cyan));
+    opacity: 0.3;
+  }
+  .paso {
+    position: relative;
+    padding-top: 20px;
+  }
+  .paso-num {
+    font-family: var(--font-display);
+    font-size: 100px;
+    color: rgba(0,0,0,0.06);
+    line-height: 1;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    z-index: 0;
+  }
+  .paso-circle {
+    width: 64px;
+    height: 64px;
+    background: var(--black);
+    color: var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 28px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  }
+  .paso-title {
+    font-family: var(--font-display);
+    font-size: 26px;
+    letter-spacing: 0.05em;
+    color: var(--black);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .paso-desc {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+  }
+  .paso-icon {
+    font-size: 32px;
+    margin-top: 16px;
+    display: block;
+  }
+
+  /* ════════════════════════════════════════════════════════
+     SOCIAL PROOF
+  ════════════════════════════════════════════════════════ */
+  #social { background: var(--black2); }
+  .social-header { text-align: center; margin-bottom: 20px; }
+  .social-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+  }
+  .social-stat {
+    text-align: center;
+  }
+  .social-stat .num {
+    font-family: var(--font-display);
+    font-size: 42px;
+    color: var(--cyan);
+    line-height: 1;
+  }
+  .social-stat .lbl {
+    font-size: 12px;
+    color: var(--gray-mid);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+  .insta-post {
+    aspect-ratio: 1;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: var(--black3);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  .insta-post:hover { transform: scale(1.02); border-color: rgba(0,180,216,0.3); }
+  .insta-post:hover .insta-hover { opacity: 1; }
+  .insta-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .insta-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,180,216,0.1);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+  }
+  .insta-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  }
+  .insta-username {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--cyan);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .insta-caption {
+    font-size: 12px;
+    color: var(--white);
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+  .insta-likes {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  /* instagram post patterns */
+  .ip1 { background: linear-gradient(135deg, #0a1520, #0d2035); }
+  .ip2 { background: linear-gradient(135deg, #1a0a0a, #2a1010); }
+  .ip3 { background: linear-gradient(135deg, #0a1a0a, #0d250d); }
+  .ip4 { background: linear-gradient(135deg, #1a1a0a, #2a2010); }
+  .ip5 { background: linear-gradient(135deg, #150a1a, #20102a); }
+  .ip6 { background: linear-gradient(135deg, #0a1015, #0d1520); }
+  .insta-cta { text-align: center; }
+  .btn-insta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+  .btn-insta:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
+  .insta-icon {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ════════════════════════════════════════════════════════
+     CONTACT
+  ════════════════════════════════════════════════════════ */
+  #contacto {
+    background:
+      radial-gradient(ellipse 70% 80% at 80% 50%, rgba(0,180,216,0.06) 0%, transparent 60%),
+      var(--black);
+  }
+  .contacto-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .contacto-title {
+    font-family: var(--font-display);
+    font-size: clamp(42px, 6vw, 68px);
+    letter-spacing: 0.03em;
+    line-height: 0.95;
+    margin-bottom: 24px;
+  }
+  .contacto-title .accent { color: var(--cyan); }
+  .contacto-desc {
+    font-size: 16px;
+    color: var(--gray-mid);
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .contacto-info { display: flex; flex-direction: column; gap: 16px; }
+  .contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    color: var(--gray);
+  }
+  .contacto-item-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(0,180,216,0.1);
+    border: 1px solid rgba(0,180,216,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+  }
+  .form-group { margin-bottom: 16px; }
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    margin-bottom: 8px;
+  }
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 14px;
+    padding: 14px 16px;
+    outline: none;
+    transition: border-color 0.25s;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: var(--cyan);
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255,255,255,0.2);
+  }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-group select option { background: var(--black3); color: var(--white); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .btn-submit {
+    width: 100%;
+    background: var(--cyan);
+    color: var(--black);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-submit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
+  }
+  .btn-submit:hover::before { transform: translateX(100%); }
+  .btn-submit:hover { background: var(--white); transform: translateY(-1px); }
+
+  /* ════════════════════════════════════════════════════════
+     FOOTER
+  ════════════════════════════════════════════════════════ */
+  footer {
+    background: #080808;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 48px 0 32px;
+  }
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 40px;
+  }
+  .footer-brand .logo-main { font-size: 32px; display: block; margin-bottom: 4px; }
+  .footer-brand .logo-sub { font-size: 9px; }
+  .footer-desc {
+    font-size: 13px;
+    color: var(--gray-mid);
+    line-height: 1.7;
+    margin-top: 16px;
+    max-width: 280px;
+  }
+  .footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: all 0.25s;
+    text-decoration: none;
+  }
+  .social-icon:hover { background: rgba(0,180,216,0.15); border-color: var(--cyan); transform: translateY(-2px); }
+  .footer-col-title {
+    font-family: var(--font-display);
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul li a {
+    font-size: 13px;
+    color: var(--gray-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col ul li a:hover { color: var(--cyan); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-copy {
+    font-size: 12px;
+    color: var(--gray-dark);
+  }
+  .footer-tagline {
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    color: var(--cyan);
+    opacity: 0.6;
+  }
+
+  /* ════════════════════════════════════════════════════════
+     WHATSAPP FLOAT
+  ════════════════════════════════════════════════════════ */
+  .wa-float {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 998;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .wa-tooltip {
+    background: var(--black);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s;
+    pointer-events: none;
+    display: none;
+  }
+  .wa-float:hover .wa-tooltip { opacity: 1; transform: translateX(0); }
+  .wa-btn {
+    width: 58px;
+    height: 58px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    text-decoration: none;
+    animation: waPulse 3s ease-in-out infinite;
+    transition: transform 0.2s;
+  }
+  .wa-btn:hover { transform: scale(1.1); }
+  @keyframes waPulse {
+    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6), 0 0 0 8px rgba(37,211,102,0.1); }
+  }
+  .wa-btn svg { width: 30px; height: 30px; }
+
+  /* ════════════════════════════════════════════════════════
+     RESPONSIVE
+  ════════════════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .productos-grid { grid-template-columns: repeat(2, 1fr); }
+    .ventajas-inner { grid-template-columns: 1fr; gap: 40px; }
+    .ventajas-visual { height: 300px; }
+    .valores-grid { grid-template-columns: repeat(2, 1fr); }
+    .ofertas-grid { grid-template-columns: 1fr; }
+    .contacto-inner { grid-template-columns: 1fr; gap: 40px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    .section { padding: 64px 0; }
+    .nav-links, .btn-nav { display: none; }
+    .nav-burger { display: flex; }
+    .hero-stats { flex-wrap: wrap; gap: 24px; }
+    .values-grid { grid-template-columns: 1fr; }
+    .valores-grid { grid-template-columns: 1fr; }
+    .products-grid { grid-template-columns: 1fr; }
+    .resultados-grid { grid-template-columns: 1fr; }
+    .pasos-grid { grid-template-columns: 1fr; gap: 24px; }
+    .pasos-grid::before { display: none; }
+    .insta-grid { grid-template-columns: repeat(2, 1fr); }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .hero-title { font-size: clamp(52px, 15vw, 80px); }
+    .hero-diamond, .hero-diamond2 { display: none; }
+    .wa-tooltip { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════ NAVIGATION ════════ -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none">
+          <polygon points="18,2 34,10 34,26 18,34 2,26 2,10" stroke="#00B4D8" stroke-width="1.5" fill="none"/>
+          <polygon points="18,8 28,13 28,23 18,28 8,23 8,13" fill="#00B4D8" opacity="0.15"/>
+          <polygon points="18,12 24,15.5 24,22.5 18,26 12,22.5 12,15.5" fill="#00B4D8" opacity="0.3"/>
+          <polygon points="18,16 21,17.8 21,21.2 18,23 15,21.2 15,17.8" fill="#00B4D8"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-main">DUPLACK</span>
+          <span class="logo-sub">Revestimientos</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#ventajas">Ventajas</a></li>
+        <li><a href="#instalacion">Cómo Instalar</a></li>
+        <li><a href="#ofertas">Ofertas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#productos" class="btn-nav">Ver Catálogo</a>
+      <button class="nav-burger" id="burgerBtn" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════ MOBILE MENU ════════ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="menuClose">✕</button>
+  <a href="#productos" class="menu-link">Productos</a>
+  <a href="#ventajas" class="menu-link">Ventajas</a>
+  <a href="#instalacion" class="menu-link">Instalar</a>
+  <a href="#ofertas" class="menu-link">Ofertas</a>
+  <a href="#contacto" class="menu-link">Contacto</a>
+</div>
+
+<!-- ════════ HERO ════════ -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-concrete"></div>
+  <div class="hero-accent-line"></div>
+  <div class="hero-accent-line2"></div>
+  <svg class="hero-diamond" viewBox="0 0 420 420" fill="none">
+    <polygon points="210,10 410,210 210,410 10,210" stroke="#00B4D8" stroke-width="1"/>
+    <polygon points="210,60 360,210 210,360 60,210" stroke="#00B4D8" stroke-width="0.5"/>
+    <polygon points="210,110 310,210 210,310 110,210" stroke="#00B4D8" stroke-width="0.5"/>
+  </svg>
+  <svg class="hero-diamond2" viewBox="0 0 280 280" fill="none">
+    <polygon points="140,10 270,140 140,270 10,140" fill="#00B4D8" opacity="1"/>
+  </svg>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge reveal" style="transition-delay:0.1s;">
+        <div class="hero-badge-dot"></div>
+        +8000 seguidores en Instagram
+      </div>
+      <h1 class="hero-title reveal delay-2">
+        TRANSFORMÁ<br>
+        <span class="accent">TUS</span><br>
+        <span class="stroke">ESPACIOS</span>
+      </h1>
+      <span class="hero-subtitle reveal delay-3">
+        Placas antihumedad. Sin obra. Sin experiencia.
+      </span>
+      <div class="hero-ctas reveal delay-4">
+        <a href="#productos" class="btn-primary">Ver Productos</a>
+        <a href="#contacto" class="btn-secondary">Pedir Presupuesto</a>
+      </div>
+      <div class="hero-stats reveal delay-5">
+        <div class="hero-stat">
+          <div class="hero-stat-num">8K+</div>
+          <div class="hero-stat-label">Seguidores</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">571+</div>
+          <div class="hero-stat-label">Publicaciones</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">100%</div>
+          <div class="hero-stat-label">DIY — Sin albanil</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">MdP</div>
+          <div class="hero-stat-label">Mar del Plata</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ════════ VALUE PROPS ════════ -->
+<section id="valores" class="section">
+  <div class="container">
+    <span class="section-label reveal">Por qué elegirnos</span>
+    <div class="valores-grid">
+      <div class="valor-card reveal delay-1">
+        <span class="valor-icon">💧</span>
+        <div class="valor-title">Antihumedad Certificado</div>
+        <div class="valor-desc">Materiales testados contra la humedad. Solución definitiva para baños, cocinas y paredes húmedas.</div>
+        <div class="valor-number">01</div>
+      </div>
+      <div class="valor-card reveal delay-2">
+        <span class="valor-icon">🔧</span>
+        <div class="valor-title">Instalación DIY</div>
+        <div class="valor-desc">No necesitás albañil ni experiencia previa. Herramientas básicas, instrucciones claras, resultado profesional.</div>
+        <div class="valor-number">02</div>
+      </div>
+      <div class="valor-card reveal delay-3">
+        <span class="valor-icon">🎨</span>
+        <div class="valor-title">Diseños y Texturas</div>
+        <div class="valor-desc">Mármol, madera, cemento, lino y más. Encontrá el estilo que se adapta a cada ambiente.</div>
+        <div class="valor-number">03</div>
+      </div>
+      <div class="valor-card reveal delay-4">
+        <span class="valor-icon">💰</span>
+        <div class="valor-title">Precio Accesible</div>
+        <div class="valor-desc">Renovación de impacto visual sin presupuesto de obra. Desde $5.000 por unidad con descuentos por cantidad.</div>
+        <div class="valor-number">04</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ PRODUCTS ════════ -->
+<section id="productos" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-label reveal">Línea completa</span>
+        <h2 class="section-title reveal delay-1">
+          NUESTROS<br>
+          <span class="accent">PRODUCTOS</span>
+        </h2>
+      </div>
+      <a href="#contacto" class="btn-secondary reveal delay-2">Consultar por catálogo</a>
+    </div>
+    <div class="products-grid">
+
+      <!-- Placas Antihumedad -->
+      <div class="product-card reveal delay-1">
+        <div class="product-visual pv-antihumedad">
+          <div class="pv-highlight"></div>
+          <div class="product-overlay"></div>
+          <div class="product-badge">20% OFF Mayo</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Revestimiento / Protección</div>
+          <div class="product-name">Placas Antihumedad</div>
+          <div class="product-desc">Solución definitiva para paredes húmedas. Modelos blancos y texturados. Se instalan sobre la superficie existente.</div>
+          <div class="product-pricing">
+            <div class="product-price-main">$16.000 <span class="unit">/ m²</span></div>
+            <div class="product-price-variants">Con descuento mayo. Precio original $20.000/m²</div>
+          </div>
+          <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20interesa%20consultar%20sobre%20Placas%20Antihumedad" class="btn-consultar" target="_blank">Consultar</a>
+        </div>
+      </div>
+
+      <!-- Autoadhesivas -->
+      <div class="product-card reveal delay-2">
+        <div class="product-visual pv-autoadhesiva">
+          <div class="pv-highlight"></div>
+          <div class="product-overlay"></div>
+          <div class="product-badge hot">Hot Sale</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Fácil Instalación</div>
+          <div class="product-name">Placas Autoadhesivas</div>
+          <div class="product-desc">Sistema tipo sticker. Pegá directamente sobre la pared. Sin herramientas especiales, sin pegamento.</div>
+          <div class="product-pricing">
+            <div class="product-price-main">$7.000 <span class="unit">/ u</span></div>
+            <div class="product-price-variants">
+              x5 unidades: $6.300 c/u &nbsp;|&nbsp; x10 o más: $5.000 c/u
+            </div>
+          </div>
+          <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20interesa%20consultar%20sobre%20Placas%20Autoadhesivas" class="btn-consultar" target="_blank">Consultar</a>
+        </div>
+      </div>
+
+      <!-- Rollo Lino -->
+      <div class="product-card reveal delay-3">
+        <div class="product-visual pv-lino">
+          <div class="pv-highlight"></div>
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Adhesivo Flexible</div>
+          <div class="product-name">Rollo Adhesivo Simil Lino</div>
+          <div class="product-desc">Textura natural de lino en formato rollo. Flexible, cortable a medida. Ideal para muebles, puertas y superficies irregulares.</div>
+          <div class="product-pricing">
+            <div class="product-price-main">$45.000 <span class="unit">/ rollo</span></div>
+          </div>
+          <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20interesa%20consultar%20sobre%20Rollo%20Simil%20Lino" class="btn-consultar" target="_blank">Consultar</a>
+        </div>
+      </div>
+
+      <!-- Wall Panels -->
+      <div class="product-card reveal delay-1">
+        <div class="product-visual pv-wall">
+          <div class="pv-highlight"></div>
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Premium / Nórdico</div>
+          <div class="product-name">Wall Panels</div>
+          <div class="product-desc">Paneles decorativos estilo slat de madera. Estética nórdica de alta gama. Transforman cualquier ambiente en minutos.</div>
+          <div class="product-pricing">
+            <div class="product-price-main">Consultar</div>
+            <div class="product-price-variants">Precio según medidas y modelo</div>
+          </div>
+          <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20interesa%20consultar%20sobre%20Wall%20Panels" class="btn-consultar" target="_blank">Consultar</a>
+        </div>
+      </div>
+
+      <!-- Jardines Verticales -->
+      <div class="product-card reveal delay-2">
+        <div class="product-visual pv-jardin">
+          <div class="pv-highlight"></div>
+          <div class="product-overlay"></div>
+          <div class="product-badge hot">Hot Sale</div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Verde Artificial</div>
+          <div class="product-name">Jardines Verticales</div>
+          <div class="product-desc">Paneles verdes artificiales 40x60cm. Sin mantenimiento, sin riego. Aptos para interior y exterior.</div>
+          <div class="product-pricing">
+            <div class="product-price-main">$8.000 <span class="unit">/ panel</span></div>
+            <div class="product-price-variants">
+              x4 paneles: $30.000 &nbsp;|&nbsp; x20 paneles: $100.000
+            </div>
+          </div>
+          <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20interesa%20consultar%20sobre%20Jardines%20Verticales" class="btn-consultar" target="_blank">Consultar</a>
+        </div>
+      </div>
+
+      <!-- Yeso Selenita -->
+      <div class="product-card reveal delay-3">
+        <div class="product-visual pv-yeso">
+          <div class="pv-highlight"></div>
+          <div class="product-overlay"></div>
+        </div>
+        <div class="product-info">
+          <div class="product-category">Fabricá tus propias</div>
+          <div class="product-name">Yeso Cerámico Selenita</div>
+          <div class="product-desc">Fabricá tus propias placas decorativas desde cero. Ideal para DIY avanzado, moldería y decoración artesanal.</div>
+          <div class="product-pricing">
+            <div class="product-price-main">$2.500 <span class="unit">/ bolso</span></div>
+            <div class="product-price-variants">Precio aprox. Consultar disponibilidad</div>
+          </div>
+          <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20interesa%20consultar%20sobre%20Yeso%20Selenita" class="btn-consultar" target="_blank">Consultar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ WHY DUPLACK ════════ -->
+<section id="ventajas" class="section">
+  <div class="container">
+    <div class="ventajas-inner">
+      <div class="ventajas-visual reveal-left">
+        <div class="ventajas-main-img"></div>
+        <div class="ventajas-tag-float">DUPLACK</div>
+        <div class="ventajas-card-float">
+          <div class="num">100%</div>
+          <div class="label">Sin Obra</div>
+        </div>
+      </div>
+      <div class="ventajas-content">
+        <span class="section-label reveal">La diferencia</span>
+        <h2 class="ventajas-title reveal delay-1">
+          POR QUÉ<br>ELEGIR<br>DUPLACK
+        </h2>
+        <ul class="ventajas-list">
+          <li class="reveal delay-1">
+            <div class="check-icon">✓</div>
+            <span><strong>Resistente a la humedad</strong> — Materiales certificados que aguantan baños, cocinas y zonas de alta condensación.</span>
+          </li>
+          <li class="reveal delay-2">
+            <div class="check-icon">✓</div>
+            <span><strong>Sin albanil, sin obra</strong> — Vos mismo instalás en horas, no en días. Sin polvo, sin escombros.</span>
+          </li>
+          <li class="reveal delay-3">
+            <div class="check-icon">✓</div>
+            <span><strong>Sobre superficies existentes</strong> — Va directo sobre la pared actual. No necesitás demoler ni preparar.</span>
+          </li>
+          <li class="reveal delay-4">
+            <div class="check-icon">✓</div>
+            <span><strong>Lavable y durable</strong> — Fácil de limpiar, resiste el paso del tiempo y los cambios de temperatura.</span>
+          </li>
+          <li class="reveal delay-5">
+            <div class="check-icon">✓</div>
+            <span><strong>Envío a todo el país</strong> — Comprás desde cualquier parte de Argentina.</span>
+          </li>
+        </ul>
+        <div class="envio-banner reveal delay-6">
+          <span>🚚</span>
+          <span>Envíos a todo el país — <strong>Consultá costos y plazos</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ ANTES Y DESPUÉS ════════ -->
+<section id="resultados" class="section">
+  <div class="container">
+    <span class="section-label reveal">Transformaciones reales</span>
+    <h2 class="section-title reveal delay-1" style="margin-bottom:48px;">RESULTADOS <span class="accent">REALES</span></h2>
+    <div class="resultados-grid">
+
+      <div class="antes-despues reveal delay-1">
+        <div class="antes-mitad ugly1">
+          <div class="ad-label">ANTES</div>
+          <div class="ad-room-label">Baño / Humedad</div>
+        </div>
+        <div class="despues-mitad clean1">
+          <div class="ad-label after">DESPUÉS</div>
+          <div class="ad-room-label after-room">Placa Antihumedad</div>
+        </div>
+        <div class="ad-divider"></div>
+        <div class="ad-arrow">↔</div>
+      </div>
+
+      <div class="antes-despues reveal delay-2">
+        <div class="antes-mitad ugly2">
+          <div class="ad-label">ANTES</div>
+          <div class="ad-room-label">Living / Pared lisa</div>
+        </div>
+        <div class="despues-mitad clean2">
+          <div class="ad-label after">DESPUÉS</div>
+          <div class="ad-room-label after-room">Wall Panel Madera</div>
+        </div>
+        <div class="ad-divider"></div>
+        <div class="ad-arrow">↔</div>
+      </div>
+
+      <div class="antes-despues reveal delay-3">
+        <div class="antes-mitad ugly3">
+          <div class="ad-label">ANTES</div>
+          <div class="ad-room-label">Terraza / Balcón</div>
+        </div>
+        <div class="despues-mitad clean3">
+          <div class="ad-label after">DESPUÉS</div>
+          <div class="ad-room-label after-room">Jardín Vertical</div>
+        </div>
+        <div class="ad-divider"></div>
+        <div class="ad-arrow">↔</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ OFERTAS ════════ -->
+<section id="ofertas" class="section">
+  <div class="container">
+    <div class="ofertas-header">
+      <span class="section-label reveal">Válido hasta fin de mes</span>
+      <h2 class="ofertas-title reveal delay-1">
+        OFERTAS <span style="color:var(--cyan);">MAYO</span>
+      </h2>
+    </div>
+  </div>
+  <div class="ticker-wrapper reveal">
+    <div class="ticker-track">
+      <span class="ticker-item">20% OFF PLACAS ANTIHUMEDAD <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">HOT SALE 20 JARDINES $100.000 <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">ESPECIALES FIN DE MAYO <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">YESO + PLACAS + AUTOADHESIVAS <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">ENVÍO GRATIS EN COMPRAS SELECCIONADAS <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">20% OFF PLACAS ANTIHUMEDAD <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">HOT SALE 20 JARDINES $100.000 <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">ESPECIALES FIN DE MAYO <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">YESO + PLACAS + AUTOADHESIVAS <span class="ticker-sep">—</span></span>
+      <span class="ticker-item">ENVÍO GRATIS EN COMPRAS SELECCIONADAS <span class="ticker-sep">—</span></span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ofertas-grid">
+
+      <div class="oferta-card featured reveal delay-1">
+        <div class="oferta-discount">20%</div>
+        <div class="oferta-name">PLACAS ANTIHUMEDAD</div>
+        <div class="oferta-desc">Descuento directo en toda la línea de placas antihumedad. Aprovechá el stock disponible este mes.</div>
+        <div class="oferta-price">$16.000 <span class="oferta-price-unit">/ m²</span></div>
+        <div class="oferta-validity"><div class="validity-dot"></div> Válido todo mayo — hasta el 31/05</div>
+        <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Quiero%20aprovechar%20el%2020%25%20OFF%20en%20placas%20antihumedad" class="oferta-cta" target="_blank">Aprovechar oferta</a>
+      </div>
+
+      <div class="oferta-card reveal delay-2">
+        <div class="oferta-discount" style="font-size:48px; line-height:1.1; color:var(--white);">HOT<br>SALE</div>
+        <div class="oferta-name">JARDINES VERTICALES x20</div>
+        <div class="oferta-desc">Pack completo de 20 paneles verdes artificiales 40x60cm. Cubrís una pared entera a precio especial.</div>
+        <div class="oferta-price">$100.000 <span class="oferta-price-unit">pack 20u</span></div>
+        <div class="oferta-validity"><div class="validity-dot"></div> Stock limitado — consultá disponibilidad</div>
+        <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20interesa%20el%20pack%20de%2020%20jardines%20verticales%20por%20%24100.000" class="oferta-cta" target="_blank">Consultar pack</a>
+      </div>
+
+      <div class="oferta-card reveal delay-3">
+        <div style="display:flex; gap:8px; margin-bottom:12px;">
+          <span style="background:rgba(0,180,216,0.15); border:1px solid rgba(0,180,216,0.3); color:var(--cyan); font-size:11px; font-weight:700; letter-spacing:0.1em; padding:4px 10px; text-transform:uppercase;">COMBO</span>
+        </div>
+        <div class="oferta-name">ESPECIAL FIN DE MAYO</div>
+        <div class="oferta-desc">Combo especial: Yeso Cerámico Selenita + Placas Antihumedad + Pack Autoadhesivas. Todo para renovar tu espacio.</div>
+        <div class="oferta-price" style="font-size:28px;">Precio especial</div>
+        <div class="oferta-validity"><div class="validity-dot"></div> Consultá para armar tu combo</div>
+        <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20interesa%20el%20combo%20especial%20fin%20de%20mayo" class="oferta-cta" target="_blank">Armar combo</a>
+      </div>
+
+      <div class="oferta-card reveal delay-4" style="display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; min-height:280px; border-style:dashed;">
+        <div style="font-size:48px; margin-bottom:16px;">📦</div>
+        <div class="oferta-name" style="font-size:22px;">COMPRÁ POR CANTIDAD</div>
+        <div class="oferta-desc">Más unidades = mejor precio. Consultanos para presupuestos personalizados en obra o negocio.</div>
+        <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Quiero%20un%20presupuesto%20por%20cantidad" class="oferta-cta" target="_blank">Pedir presupuesto</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════ INSTALACIÓN ════════ -->
+<section id="instalacion" class="section">
+  <div class="container">
+    <div style="text-align:center; max-width:600px; margin:0 auto;">
+      <span class="section-label reveal">Simple y rápido</span>
+      <h2 class="section-title reveal delay-1" style="margin-bottom:16px;">
+        CÓMO <span class="accent">INSTALAR</span>
+      </h2>
+      <p class="reveal delay-2" style="font-size:16px; color:#555; margin-bottom:0;">
+        Sin experiencia previa. Sin herramientas especiales. En pocas horas tu espacio se transforma.
+      </p>
+    </div>
+    <div class="pasos-grid">
+
+      <div class="paso reveal delay-1">
+        <div class="paso-num">1</div>
+        <div class="paso-circle">01</div>
+        <div class="paso-title">Preparás la superficie</div>
+        <div class="paso-desc">
+          Limpiá la pared con un paño húmedo. No hace falta picar ni revocar. Si hay pintura suelta, removela con espátula. La superficie tiene que estar seca y sin polvo.
+        </div>
+        <span class="paso-icon">🪣</span>
+      </div>
+
+      <div class="paso reveal delay-2">
+        <div class="paso-num">2</div>
+        <div class="paso-circle">02</div>
+        <div class="paso-title">Medís y cortás</div>
+        <div class="paso-desc">
+          Medí el espacio a cubrir. Las placas se cortan fácil con sierra caladora o serruchito. Adaptá las piezas a bordes, esquinas y tomacorrientes sin complicaciones.
+        </div>
+        <span class="paso-icon">📐</span>
+      </div>
+
+      <div class="paso reveal delay-3">
+        <div class="paso-num">3</div>
+        <div class="paso-circle">03</div>
+        <div class="paso-title">Colocás y listo</div>
+        <div class="paso-desc">
+          Aplicá adhesivo de contacto o usá el sistema autoadhesivo según el producto. Presioná firmemente. En minutos tenés un resultado profesional.
+        </div>
+        <span class="paso-icon">✅</span>
+      </div>
+
+    </div>
+    <div style="text-align:center; margin-top:48px;" class="reveal delay-4">
+      <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Tengo%20una%20consulta%20sobre%20la%20instalacion" class="btn-primary" target="_blank">Tengo una duda — Consultá</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ SOCIAL PROOF ════════ -->
+<section id="social" class="section">
+  <div class="container">
+    <div class="social-header">
+      <span class="section-label reveal">Comunidad real</span>
+      <h2 class="section-title reveal delay-1" style="margin-bottom:8px;">TRANSFORMACIONES <span class="accent">REALES</span></h2>
+      <p class="reveal delay-2" style="font-size:14px; color:var(--gray-mid); margin-bottom:32px;">
+        +571 publicaciones. +8000 seguidores. Comunidad real en @duplack_placasantihumedad
+      </p>
+    </div>
+    <div class="social-stats reveal delay-2">
+      <div class="social-stat">
+        <div class="num">8K+</div>
+        <div class="lbl">Seguidores</div>
+      </div>
+      <div class="social-stat">
+        <div class="num">571+</div>
+        <div class="lbl">Publicaciones</div>
+      </div>
+      <div class="social-stat">
+        <div class="num">100%</div>
+        <div class="lbl">Clientes reales</div>
+      </div>
+    </div>
+    <div class="insta-grid">
+
+      <div class="insta-post reveal delay-1">
+        <div class="insta-bg ip1" style="font-size:40px; letter-spacing:4px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🏠</div>
+        <div class="insta-likes">❤️ 342</div>
+        <div class="insta-hover">🔍</div>
+        <div class="insta-content">
+          <div class="insta-username">@duplack_placasantihumedad</div>
+          <div class="insta-caption">Baño renovado con placas antihumedad en blanco marmolado. Sin obra, resultado increible 🙌</div>
+        </div>
+      </div>
+
+      <div class="insta-post reveal delay-2">
+        <div class="insta-bg ip2" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🌿</div>
+        <div class="insta-likes">❤️ 891</div>
+        <div class="insta-hover">🔍</div>
+        <div class="insta-content">
+          <div class="insta-username">@duplack_placasantihumedad</div>
+          <div class="insta-caption">Jardín vertical en terraza. 20 paneles, 2 horas de trabajo. El antes era impresentable 💚</div>
+        </div>
+      </div>
+
+      <div class="insta-post reveal delay-3">
+        <div class="insta-bg ip3" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🛋️</div>
+        <div class="insta-likes">❤️ 1.2K</div>
+        <div class="insta-hover">🔍</div>
+        <div class="insta-content">
+          <div class="insta-username">@duplack_placasantihumedad</div>
+          <div class="insta-caption">Wall panel slat en living. Estética nórdica 100%. Cliente de Mar del Plata #DuplackTransforma</div>
+        </div>
+      </div>
+
+      <div class="insta-post reveal delay-4">
+        <div class="insta-bg ip4" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🍳</div>
+        <div class="insta-likes">❤️ 567</div>
+        <div class="insta-hover">🔍</div>
+        <div class="insta-content">
+          <div class="insta-username">@duplack_placasantihumedad</div>
+          <div class="insta-caption">Backsplash de cocina con autoadhesivas simil cerámica. Lo instalé sola en 1 hora 👏</div>
+        </div>
+      </div>
+
+      <div class="insta-post reveal delay-5">
+        <div class="insta-bg ip5" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🛁</div>
+        <div class="insta-likes">❤️ 734</div>
+        <div class="insta-hover">🔍</div>
+        <div class="insta-content">
+          <div class="insta-username">@duplack_placasantihumedad</div>
+          <div class="insta-caption">Paredes de baño con humedad solucionadas. Pared fea al fondo, elegante al frente ✨</div>
+        </div>
+      </div>
+
+      <div class="insta-post reveal delay-6">
+        <div class="insta-bg ip6" style="font-size:40px; opacity:0.3; display:flex; align-items:center; justify-content:center;">🖼️</div>
+        <div class="insta-likes">❤️ 483</div>
+        <div class="insta-hover">🔍</div>
+        <div class="insta-content">
+          <div class="insta-username">@duplack_placasantihumedad</div>
+          <div class="insta-caption">Rollo simil lino en puertas y muebles de cocina. Renovación total sin comprar muebles nuevos 🔥</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="insta-cta reveal delay-3">
+      <a href="https://instagram.com/duplack_placasantihumedad" class="btn-insta" target="_blank">
+        <div class="insta-icon">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </div>
+        Seguinos en Instagram @duplack_placasantihumedad
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CONTACT ════════ -->
+<section id="contacto" class="section">
+  <div class="container">
+    <div class="contacto-inner">
+      <div>
+        <span class="section-label reveal">Hablemos</span>
+        <h2 class="contacto-title reveal delay-1">
+          ¿LISTO PARA<br>TRANSFORMAR<br><span class="accent">TU ESPACIO?</span>
+        </h2>
+        <p class="contacto-desc reveal delay-2">
+          Escribinos por WhatsApp, mandanos un mensaje o pasate por la tienda. Estamos en Mar del Plata y enviamos a todo el país.
+        </p>
+        <div class="contacto-info">
+          <div class="contacto-item reveal delay-2">
+            <div class="contacto-item-icon">📍</div>
+            <span>9 de Julio 5681, Mar del Plata, Buenos Aires</span>
+          </div>
+          <div class="contacto-item reveal delay-3">
+            <div class="contacto-item-icon">📱</div>
+            <span>WhatsApp — Consultá precio y disponibilidad</span>
+          </div>
+          <div class="contacto-item reveal delay-4">
+            <div class="contacto-item-icon">📸</div>
+            <span>@duplack_placasantihumedad en Instagram</span>
+          </div>
+          <div class="contacto-item reveal delay-5">
+            <div class="contacto-item-icon">🕐</div>
+            <span>Lunes a Viernes 9-18hs / Sábados 9-13hs</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <form id="contactForm" class="reveal delay-2" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" name="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input type="tel" name="telefono" placeholder="(223) 000-0000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="tucorreo@mail.com" required>
+          </div>
+          <div class="form-group">
+            <label>Producto de interés</label>
+            <select name="producto">
+              <option value="">Seleccioná un producto</option>
+              <option>Placas Antihumedad</option>
+              <option>Placas Autoadhesivas</option>
+              <option>Rollo Adhesivo Simil Lino</option>
+              <option>Wall Panels</option>
+              <option>Jardines Verticales</option>
+              <option>Yeso Cerámico Selenita</option>
+              <option>Varios / Consulta general</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea name="mensaje" placeholder="Contanos qué necesitás, cuántos m² querés cubrir, o cualquier consulta..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Enviar Consulta</button>
+        </form>
+        <div id="formSuccess" style="display:none; text-align:center; padding:40px; background:rgba(0,180,216,0.08); border:1px solid rgba(0,180,216,0.2);">
+          <div style="font-size:40px; margin-bottom:12px;">✅</div>
+          <div style="font-family:var(--font-display); font-size:24px; color:var(--cyan); letter-spacing:0.05em; margin-bottom:8px;">MENSAJE ENVIADO</div>
+          <div style="font-size:14px; color:var(--gray-mid);">Te respondemos a la brevedad. También podés escribirnos directo por WhatsApp.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="margin-bottom:0;">
+          <svg class="logo-icon" viewBox="0 0 36 36" fill="none">
+            <polygon points="18,2 34,10 34,26 18,34 2,26 2,10" stroke="#00B4D8" stroke-width="1.5" fill="none"/>
+            <polygon points="18,8 28,13 28,23 18,28 8,23 8,13" fill="#00B4D8" opacity="0.15"/>
+            <polygon points="18,12 24,15.5 24,22.5 18,26 12,22.5 12,15.5" fill="#00B4D8" opacity="0.3"/>
+            <polygon points="18,16 21,17.8 21,21.2 18,23 15,21.2 15,17.8" fill="#00B4D8"/>
+          </svg>
+          <div class="logo-text">
+            <span class="logo-main">DUPLACK</span>
+            <span class="logo-sub">Revestimientos</span>
+          </div>
+        </a>
+        <p class="footer-desc">Revestimientos. Soluciones simples. Transformá tus espacios con cambios modernos y al alcance de todos.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/duplack_placasantihumedad" class="social-icon" target="_blank" title="Instagram">📸</a>
+          <a href="https://wa.me/5492236000000" class="social-icon" target="_blank" title="WhatsApp">💬</a>
+          <a href="https://www.facebook.com" class="social-icon" target="_blank" title="Facebook">👥</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Productos</div>
+        <ul>
+          <li><a href="#productos">Placas Antihumedad</a></li>
+          <li><a href="#productos">Placas Autoadhesivas</a></li>
+          <li><a href="#productos">Rollo Simil Lino</a></li>
+          <li><a href="#productos">Wall Panels</a></li>
+          <li><a href="#productos">Jardines Verticales</a></li>
+          <li><a href="#productos">Yeso Cerámico Selenita</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Info</div>
+        <ul>
+          <li><a href="#ventajas">Por qué DUPLACK</a></li>
+          <li><a href="#instalacion">Cómo instalar</a></li>
+          <li><a href="#ofertas">Ofertas del mes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#social">Instagram</a></li>
+        </ul>
+        <div style="margin-top:20px;">
+          <div style="font-size:11px; color:var(--gray-dark); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:8px;">Dirección</div>
+          <div style="font-size:13px; color:var(--gray-mid); line-height:1.6;">9 de Julio 5681<br>Mar del Plata, Buenos Aires</div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 DUPLACK Revestimientos. Mar del Plata, Argentina.</div>
+      <div class="footer-tagline">Revestimientos. Soluciones simples.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════ WHATSAPP FLOAT ════════ -->
+<div class="wa-float">
+  <div class="wa-tooltip">Consultá por WhatsApp</div>
+  <a href="https://wa.me/5492236000000?text=Hola%20DUPLACK!%20Me%20contacto%20desde%20la%20web.%20Quiero%20consultar%20sobre%20sus%20productos%20%F0%9F%91%8B" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+  // ── Sticky nav
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ── Mobile menu
+  const burger = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeBtn = document.getElementById('menuClose');
+  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  closeBtn.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  mobileMenu.querySelectorAll('.menu-link').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // ── Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // ── Hero elements immediate reveal
+  document.querySelectorAll('.hero-content .reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 100 + i * 120);
+  });
+
+  // ── Form
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    const data = new FormData(form);
+    const nombre = data.get('nombre');
+    const telefono = data.get('telefono');
+    const email = data.get('email');
+    const producto = data.get('producto');
+    const mensaje = data.get('mensaje');
+    const waMsg = encodeURIComponent(
+      `Hola DUPLACK! Me contacto desde la web.\n\nNombre: ${nombre}\nTeléfono: ${telefono}\nEmail: ${email}\nProducto: ${producto || 'No especificado'}\n\nMensaje: ${mensaje}`
+    );
+    window.open(`https://wa.me/5492236000000?text=${waMsg}`, '_blank');
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+
+  // ── Parallax hero geometric
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    const heroAccent = document.querySelector('.hero-accent-line');
+    if (heroAccent) heroAccent.style.transform = `translateY(${y * 0.3}px)`;
+  }, { passive: true });
+</script>
+</body>
+</html>
